@@ -43,6 +43,53 @@ void CargaDeTrabajo(Trabajo lista[],int tam)
 	int i;
 	for(i=0; i<tam; i++)
 	{
-		lista[i] = biciLoca();
+		lista[i] = biciLoca(T);
 	}
+}
+void ListaServivios(Servicios biciLoca)
+{
+	printf("%d %s %f \n", biciLoca.id,biciLoca.descripcion,biciLoca.precio);
+
+}
+void ModificarTrabajo(Trabajo lista[], int tam)
+{
+
+	int idIngresado;
+	int i;
+	printf("ingrese id");
+	scanf("%d", &idIngresado);
+
+	for(i=0; i<tam; i++)
+		{
+			if(idIngresado == lista[i].id)
+			{
+				//que quiere modificar se hace un bucle y preguntar
+
+				printf(" ingrese Nombre:");
+				fflush(stdin);
+				scanf("%d", lista[i].id);
+			}
+		}
+}
+
+Trabajo IngresoTrabajos()
+{
+	Trabajo realizados;
+
+	printf(" Ingrese id");
+	scanf("%d", &realizados.id);
+
+	printf(" Ingrese marca de Bicicleta:");
+	scanf("%[^\n]", realizados.marcaBicicleta);
+
+	printf("Ingrese rodado de bicleta:");
+	scanf("%d", &realizados.rodadoBicicleta);
+
+	printf("Ingrese feche.mes.anio:");
+	scanf("%d", &realizados.fecha);
+
+	printf("ingrese id de servicio:");
+	scanf("%d", &realizados.idServivio);
+
+	return realizados;
 }

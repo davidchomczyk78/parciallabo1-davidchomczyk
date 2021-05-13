@@ -11,7 +11,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Parci.h"
+#define T 3
+typedef struct
+{
+	int id;
+	char descripcion[25];
+	float precio;
+	int isEmpty;
+}Servicios;
 
+typedef struct
+{
+	int id;
+	char marcaBicicleta[30];
+	int rodadoBicicleta;
+	int idServivio;
+	int fecha;
+	int isEmpty;
+
+}Trabajo;
 
 int main(void)
 {
@@ -20,12 +38,12 @@ int main(void)
 	Servicios biciLoca[T]={250,"Limpieza",300,"Parche",400,"Centrado",350,"Cadena"};
 	int opciones;
 	do{
-		printf("1.ALTA: trabajo\n");
-		printf("2.MODIFICAR: trabajo\n");
-		printf("3.BAJA: trabajo\n");
-		printf("4.LISTAR TRABAJO:\n");
-		printf("5.LISTA SERVICIOS:\n");
-		printf("6.TOTAL\n:");
+		printf("A.ALTA: trabajo\n");
+		printf("B.MODIFICAR: trabajo\n");
+		printf("C.BAJA: trabajo\n");
+		printf("D.LISTAR TRABAJO:\n");
+		printf("E.LISTA SERVICIOS:\n");
+		printf("F.TOTAL\n:");
 		printf("10.SALIR:");
 		printf("elija opciones:");
 		scanf("%d", &opciones);
@@ -33,12 +51,16 @@ int main(void)
 
 		switch(opciones)
 		{
-			case 1:
+			case 'A':
 				CargaDeTrabajo(biciLoca, T);
 				break;
-			case 2:
+			case 'B':
+				ModificarTrabajo(Trabajo, T);
 				break;
-			case 3:
+			case'C':
+				break;
+			case'E':
+				 ListaServivios(biciLoca, T);
 				break;
 
 		}

@@ -10,5 +10,9 @@
 #include <stdio.h>
 void CargaDeTrabajo(Trabajo[],int);
 void InicializarTrabajo(Trabajo[], int);
+void ListaServivios(Servicios);
+void ModificarTrabajo(Trabajo[], int);
+Trabajo IngresoTrabajos();
 
-#endif /* PARCI_H
+
+#endif /* PARCI_H*/
